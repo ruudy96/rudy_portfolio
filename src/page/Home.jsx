@@ -23,6 +23,18 @@ const Home = () => {
         },
     ]
 
+    const copy = () => {
+        const url = window.location.href+'src/assets/CV.pdf'
+
+        const filename = url.split("/").pop();
+        const aTag = document.createElement('a');
+        aTag.href = url;
+        aTag.setAttribute("download", filename)
+        document.body.appendChild(aTag)
+        aTag.click();
+        aTag.remove()
+    }
+
     return (
         <div id="home" className="home mt-14 md:mt-0 lg:mt-0 xl:mt-1 2xl:mt-1" name="home">
             <div className="container mx-auto">
@@ -35,9 +47,9 @@ const Home = () => {
 
 
                             {buttons.map((button,idx) => (
-                            <ButtonsCard key={idx}>
-                                { button.component }
-                            </ButtonsCard>
+                                <ButtonsCard key={idx} onClick={() => copy()}>
+                                    { button.component }
+                                </ButtonsCard>
                             ))}
                         </div>
 

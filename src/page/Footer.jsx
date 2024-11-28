@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="p-0">
                         <button className="btn bg-transparent text-white min-h-0 xl:h-0">
                             <FaPhone className='text-white'/> 
-                            +62 858 3749 030
+                            +62 858 0374 9030
                         </button>
                     </div>
                 
