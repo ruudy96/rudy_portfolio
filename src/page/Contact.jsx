@@ -28,11 +28,8 @@ const Contact = () => {
                             <LabelInputContainer className="mb-4">
                             <Input id="text" placeholder="subject" type="text" />
                             </LabelInputContainer>
-
                             <LabelInputContainer className="mb-4">
-                              <Input id="text" placeholder="Message" type="text"/>
-
-                              
+                            <Input id="message" placeholder="Message" type="text"/>
                             </LabelInputContainer>
 
 

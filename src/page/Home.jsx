@@ -3,6 +3,7 @@ import gambar from '../assets/image/State2.png'
 import { TextGenerateEffect  } from '../components/TypeWriter';
 import { Vortex } from '../components/Vortex';
 import { ButtonsCard } from '../components/tailwindButton';
+import cv from "../assets/CV.pdf"
 
 const Home = () => {
 
@@ -13,28 +14,16 @@ const Home = () => {
             description: "Border Magic button for your website",
             showDot: false,
             component: (
-              <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2">
+              <a href={cv} target='_blank' className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
                     Download CV
                 </span>
-              </button>
+              </a>
             )
         },
     ]
 
-    const copy = () => {
-        // const url = window.location.href+'src/assets/CV.pdf'
-        const url = "https://github.com/ruudy96/rudy_portfolio/blob/main/src/assets/CV.pdf"
-
-        const filename = url.split("/").pop();
-        const aTag = document.createElement('a');
-        aTag.href = url;
-        aTag.setAttribute("download", filename)
-        document.body.appendChild(aTag)
-        aTag.click();
-        aTag.remove()
-    }
 
     return (
         <div id="home" className="home mt-14 md:mt-0 lg:mt-0 xl:mt-1 2xl:mt-1" name="home">
@@ -45,10 +34,8 @@ const Home = () => {
                     <div className=" md:mt-2 grid grid-cols-1 md:grid-cols-2 gap-2">
                         <div className="w-full self-center px-2 md:pl-14 lg:pl-12 xl:pl-28 2xl:pl-40">
                             <TextGenerateEffect duration={2} filter={false} words={word} />
-
-
                             {buttons.map((button,idx) => (
-                                <ButtonsCard key={idx} onClick={() => copy()}>
+                                <ButtonsCard key={idx}>
                                     { button.component }
                                 </ButtonsCard>
                             ))}
@@ -57,7 +44,6 @@ const Home = () => {
                         <div className="w-full self-end px-2">
                             <div className="relative ">
                                 <img  src={gambar} alt="" className="object-cover aspect-[6/6] rounded-full border-[10px] border-ungu6"/>
-                                
                             </div>
                         </div> 
 
