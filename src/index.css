@@ -1,0 +1,37 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(#002E4E) var(#00406C);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(#00406C);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(#002E4E);
+  border-radius: 14px;
+  border: 3px solid var(#00406C);
+}
+
+.with-blur-backdrop {
+  background-color: #001523a4;  ;
+  backdrop-filter: blur(8px); /* Apply blur effect */
+}
+
+.pointer {
+  cursor: pointer;
+}
