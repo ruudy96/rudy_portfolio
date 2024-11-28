@@ -24,7 +24,8 @@ const Home = () => {
     ]
 
     const copy = () => {
-        const url = window.location.href+'src/assets/CV.pdf'
+        // const url = window.location.href+'src/assets/CV.pdf'
+        const url = "https://github.com/ruudy96/rudy_portfolio/blob/main/src/assets/CV.pdf"
 
         const filename = url.split("/").pop();
         const aTag = document.createElement('a');
