@@ -22,15 +22,15 @@ const Contact = () => {
                                 <Input id="firstname" placeholder="Name" type="text" />
                             </LabelInputContainer>
                         </div>
-                            <LabelInputContainer className="mb-4">
-                            <Input id="email" placeholder="email" type="email" />
-                            </LabelInputContainer>
-                            <LabelInputContainer className="mb-4">
-                            <Input id="text" placeholder="subject" type="text" />
-                            </LabelInputContainer>
-                            <LabelInputContainer className="mb-4">
-                            <Input id="message" placeholder="Message" type="text"/>
-                            </LabelInputContainer>
+                        <LabelInputContainer className="mb-4">
+                          <Input id="email" placeholder="email" type="email" />
+                        </LabelInputContainer>
+                        {/* <LabelInputContainer className="mb-4">
+                          <Input id="text" placeholder="subject" type="text" />
+                        </LabelInputContainer> */}
+                        <LabelInputContainer className="mb-4">
+                          <Input id="message" placeholder="Message" type="text"/>
+                        </LabelInputContainer>
 
 
                         <button
